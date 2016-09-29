@@ -74,17 +74,6 @@ $clientes = [
 ];
 
 
-$ord = filter_input(INPUT_GET, 'ord');
-if($ord === 'desc') {
-    krsort($clientes);
-}
-$id = filter_input(INPUT_GET, 'id');
-if(null !== $id && array_key_exists($id-1,$clientes)) {
-    $cliente = $clientes[$id-1];
-} else {
-    $cliente = null;
-}
-
 ?>
 
 
@@ -92,6 +81,27 @@ if(null !== $id && array_key_exists($id-1,$clientes)) {
 <html lang="pt-br">
 
 <head>
+
+    <script language="JavaScript">
+        function Exibir($id) {
+            //recebe a string com elementos separados, vindos do PHP
+            $string_array =  <?=json_encode($clientes)?>
+            //transforma esta string em um array próprio do Javascript
+            //$array_produtos = $string_array.split("|");
+            $obj = new Object();
+            $obj.id = 1;
+            $obj.nome = "Teste";
+            $obj.cpf = "0123";
+            $obj.endereco = "Teste";
+            $obj.telefone = "Teste";
+            $obj = $string_array[$id-1];
+            alert( "ID: " + $obj.id + "\nNome: " + $obj.nome +
+                    "\nCPF: " + $obj.cpf + "\nEndereço: " + $obj.endereco +
+                    "\nTelefone: " + $obj.telefone);
+        }
+
+
+    </script>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -160,42 +170,22 @@ if(null !== $id && array_key_exists($id-1,$clientes)) {
                 <div class="col-lg-12">
                     <h1>Clientes</h1>
                     <br>
-                    
-                    <?php
-                    if($cliente):
-                    ?>
-                    <div class="page-header">
-                        <h2><?php echo $cliente->nome; ?></h2>
-                    </div>
-                    <p>
-                        <?php
-                        echo $cliente->cpf . "<br />";
-                        echo $cliente->endereco . "<br />";
-                        echo $cliente->telefone . "<br />";
-                        ?>
-                    </p>
-                    <hr />
-                    <a href="/" class="btn btn-primary">Voltar</a>
-                    <?php
-                    else:
-                    ?>
+
                     <table class="table table-hover tabla-responsive">
                         <thead>
                         <tr>
-                            <td>ID <?php echo isset($ord) ? "<a href='/'><i class='glyphicon glyphicon-triangle-bottom'></i></a>" : "<a href='/?ord=desc'><i class='glyphicon glyphicon-triangle-top'></i></a>"; ?> </td>
+                            <td>ID</td>
                             <td>Nome</td>
                             <td>Ação</td>
                         </tr>
                         </thead>
                         <?php
                         foreach($clientes as $cli) {
-                        echo "<tr><td>{$cli->id}</td><td>{$cli->nome}</td><td><a href='/?id={$cli->id}' class='btn btn-primary'>Detalhes</a></td>";
+                        echo "<tr><td>{$cli->id}</td><td>{$cli->nome}</td><td><button onclick='Exibir({$cli->id})' class='btn btn-primary'>Detalhes</button></td>";
                         }
                         ?>
                     </table>
-                    <?php
-                    endif;
-                    ?>
+
 
                 </div>
             </div>
@@ -209,7 +199,20 @@ if(null !== $id && array_key_exists($id-1,$clientes)) {
                 <div class="col-lg-12">
                     <h1>Ascendente</h1>
 
-                    <?php echo $clientes[1]->getNome()." Nome"; ?>
+                        <table class="table table-hover tabla-responsive">
+                            <thead>
+                            <tr>
+                                <td>ID <?php echo isset($ord) ? "<a href='/'><i class='glyphicon glyphicon-triangle-bottom'></i></a>" : "<a href='/?ord=desc'><i class='glyphicon glyphicon-triangle-top'></i></a>"; ?> </td>
+                                <td>Nome</td>
+                                <td>Ação</td>
+                            </tr>
+                            </thead>
+                            <?php
+                            foreach($clientes as $cli) {
+                                echo "<tr><td>{$cli->id}</td><td>{$cli->nome}</td><td><button onclick='Exibir({$cli->id})' class='btn btn-primary'>Detalhes</button></td>";
+                            }
+                            ?>
+                        </table>
 
                 </div>
             </div>
@@ -222,6 +225,25 @@ if(null !== $id && array_key_exists($id-1,$clientes)) {
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Descendente</h1>
+
+                    <?php
+                    krsort($clientes);
+                        ?>
+                        <table class="table table-hover tabla-responsive">
+                            <thead>
+                            <tr>
+                                <td>ID <?php echo isset($ord) ? "<a href='/'><i class='glyphicon glyphicon-triangle-bottom'></i></a>" : "<i class='glyphicon glyphicon-triangle-bottom'></i>"; ?> </td>
+                                <td>Nome</td>
+                                <td>Ação</td>
+                            </tr>
+                            </thead>
+                            <?php
+                            foreach($clientes as $cli) {
+                                echo "<tr><td>{$cli->id}</td><td>{$cli->nome}</td><td><button onclick='Exibir({$cli->id})' class='btn btn-primary'>Detalhes</button></td>";
+                            }
+                            ?>
+                        </table>
+
                 </div>
             </div>
         </div>
