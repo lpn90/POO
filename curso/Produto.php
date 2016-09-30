@@ -7,10 +7,10 @@
  */
 class Produto
 {
-    public $nome;
-    public $descricao;
-    public $valor;
-    public $estoque;
+    private $nome;
+    private $descricao;
+    private $valor;
+    private $estoque;
 
     /**
      * Produto constructor.
