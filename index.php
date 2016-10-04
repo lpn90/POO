@@ -4,74 +4,28 @@
  * Date: 28/09/2016
  * Time: 10:00
  */
-require_once __DIR__ . "/Cliente.php";
+require_once __DIR__ . "/PessoaFisica.php";
+require_once __DIR__ . "/PessoaJuridica.php";
 
-$clientes = array( );
-
-$cliente1 = new Cliente();
-$cliente1->id = 1;
-$cliente1->nome = "Ana";
-$cliente1->cpf = 11111111111;
-$cliente1->endereco = "Rua 1, 35";
-$cliente1->telefone = "(31) 9 8432-3872";
-$cliente2 = new Cliente();
-$cliente2->id = 2;
-$cliente2->nome = "José";
-$cliente2->cpf = 22222222222;
-$cliente2->endereco = "Rua 1, 35";
-$cliente2->telefone = "(31) 9 8432-3872";
-$cliente3 = new Cliente();
-$cliente3->id = 3;
-$cliente3->nome = "Paulo";
-$cliente3->cpf = 33333333333;
-$cliente3->endereco = "Rua 1, 35";
-$cliente3->telefone = "(31) 9 8432-3872";
-$cliente4 = new Cliente();
-$cliente4->id = 4;
-$cliente4->nome = "Amanda";
-$cliente4->cpf = 44444444444;
-$cliente4->endereco = "Rua 1, 35";
-$cliente4->telefone = "(31) 9 8432-3872";
-$cliente5 = new Cliente();
-$cliente5->id = 5;
-$cliente5->nome = "Júlia";
-$cliente5->cpf = 55555555555;
-$cliente5->endereco = "Rua 1, 35";
-$cliente5->telefone = "(31) 9 8432-3872";
-$cliente6 = new Cliente();
-$cliente6->id = 6;
-$cliente6->nome = "Priscila";
-$cliente6->cpf = 66666666666;
-$cliente6->endereco = "Rua 1, 35";
-$cliente6->telefone = "(31) 9 8432-3872";
-$cliente7 = new Cliente();
-$cliente7->id = 7;
-$cliente7->nome = "Flávia";
-$cliente7->cpf = 77777777777;
-$cliente7->endereco = "Rua 1, 35";
-$cliente7->telefone = "(31) 9 8432-3872";
-$cliente8 = new Cliente();
-$cliente8->id = 8;
-$cliente8->nome = "Antônio";
-$cliente8->cpf = 88888888888;
-$cliente8->endereco = "Rua 1, 35";
-$cliente8->telefone = "(31) 9 8432-3872";
-$cliente9 = new Cliente();
-$cliente9->id = 9;
-$cliente9->nome = "Pedro";
-$cliente9->cpf = 99999999999;
-$cliente9->endereco = "Rua 1, 35";
-$cliente9->telefone = "(31) 9 8432-3872";
-$cliente10 = new Cliente();
-$cliente10->id = 10;
-$cliente10->nome = "Luiz";
-$cliente10->cpf = 12345678912;
-$cliente10->endereco = "Rua 1, 35";
-$cliente10->telefone = "(31) 9 8432-3872";
+$cliente1 = new PessoaFisica(1,'Ana','Rua 1, 35', '(31) 9 8432-5893', 'Av. Paraguai, 12', rand(0,5),'11111111111');
+$cliente2 = new PessoaFisica(2,'Maria','Rua 1, 35', '(31) 9 8432-5893', null, rand(0,5),'22222222222');
+$cliente3 = new PessoaFisica(3,'Paula','Rua 1, 35', '(31) 9 8432-5893', 'Av. Paraguai, 12', rand(0,5),'33333333333');
+$cliente4 = new PessoaFisica(4,'José','Rua 1, 35', '(31) 9 8432-5893', null, rand(0,5),'44444444444');
+$cliente5 = new PessoaFisica(5,'Luiz','Rua 1, 35', '(31) 9 8432-5893', 'Av. Paraguai, 12', rand(0,5),'55555555555');
+$cliente6 = new PessoaJuridica(6, 'Lojas Prado', 'Rua A, 45', '(31) 3222-2222', 'Rua A, 45', rand(0,5), '76.208.286/0001-67');
+$cliente7 = new PessoaJuridica(7, 'Armarinho 1', 'Rua A, 45', '(31) 3222-2222', 'Rua A, 45', rand(0,5), '76.208.286/0001-67');
+$cliente8 = new PessoaJuridica(8, 'Café Preto', 'Rua A, 45', '(31) 3222-2222', 'Rua A, 45', rand(0,5), '76.208.286/0001-67');
+$cliente9 = new PessoaJuridica(9, 'Jóias Helena', 'Rua A, 45', '(31) 3222-2222', 'Rua A, 45', rand(0,5), '76.208.286/0001-67');
+$cliente10 = new PessoaJuridica(10, 'Chapéus Touro', 'Rua A, 45', '(31) 3222-2222', 'Rua A, 45', rand(0,5), '76.208.286/0001-67');
 $clientes = [
     $cliente1, $cliente2, $cliente3, $cliente4, $cliente5,
     $cliente6, $cliente7, $cliente8, $cliente9, $cliente10
 ];
+
+
+session_start();
+
+$_SESSION['clientes'] = $clientes;
 
 
 ?>
@@ -81,28 +35,7 @@ $clientes = [
 <html lang="pt-br">
 
 <head>
-
-    <script language="JavaScript">
-        function Exibir($id) {
-            //recebe a string com elementos separados, vindos do PHP
-            $string_array =  <?=json_encode($clientes)?>
-            //transforma esta string em um array próprio do Javascript
-            //$array_produtos = $string_array.split("|");
-            $obj = new Object();
-            $obj.id = 1;
-            $obj.nome = "Teste";
-            $obj.cpf = "0123";
-            $obj.endereco = "Teste";
-            $obj.telefone = "Teste";
-            $obj = $string_array[$id-1];
-            alert( "ID: " + $obj.id + "\nNome: " + $obj.nome +
-                    "\nCPF: " + $obj.cpf + "\nEndereço: " + $obj.endereco +
-                    "\nTelefone: " + $obj.telefone);
-        }
-
-
-    </script>
-
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -174,15 +107,24 @@ $clientes = [
                     <table class="table table-hover tabla-responsive">
                         <thead>
                         <tr>
-                            <td>ID</td>
+                            <td>ID <?php echo isset($ord) ? "<a href='/'><i class='glyphicon glyphicon-triangle-bottom'></i></a>" : "<a href='/?ord=desc'><i class='glyphicon glyphicon-triangle-top'></i></a>"; ?> </td>
                             <td>Nome</td>
+                            <td>Pessoa Física</td>
+                            <td>Classificação</td>
                             <td>Ação</td>
                         </tr>
                         </thead>
                         <?php
-                        foreach($clientes as $cli) {
-                        echo "<tr><td>{$cli->id}</td><td>{$cli->nome}</td><td><button onclick='Exibir({$cli->id})' class='btn btn-primary'>Detalhes</button></td>";
-                        }
+                        foreach($clientes as $cli):?>
+                            <tr>
+                                <td><?php echo $cli->getId(); ?></td>
+                                <td><?php echo $cli->getNome(); ?></td>
+                                <td><?php echo $cli instanceof PessoaFisica ? "<i class='glyphicon glyphicon-ok'></i>" : "<i class='glyphicon glyphicon-remove'></i>"; ?></td>
+                                <td><?php for($i = 0; $i < $cli->getImportancia(); $i++) { echo '<i class="text-warning glyphicon glyphicon-star"></i>'; } ?></td>
+                                <td><a href='./exibeCliente.php/?id=<?php echo $cli->getId(); ?>' class='btn btn-primary'>Detalhes</a></td>
+                            </tr>
+                            <?php
+                        endforeach;
                         ?>
                     </table>
 
@@ -204,13 +146,22 @@ $clientes = [
                             <tr>
                                 <td>ID <?php echo isset($ord) ? "<a href='/'><i class='glyphicon glyphicon-triangle-bottom'></i></a>" : "<a href='/?ord=desc'><i class='glyphicon glyphicon-triangle-top'></i></a>"; ?> </td>
                                 <td>Nome</td>
+                                <td>Pessoa Física</td>
+                                <td>Classificação</td>
                                 <td>Ação</td>
                             </tr>
                             </thead>
                             <?php
-                            foreach($clientes as $cli) {
-                                echo "<tr><td>{$cli->id}</td><td>{$cli->nome}</td><td><button onclick='Exibir({$cli->id})' class='btn btn-primary'>Detalhes</button></td>";
-                            }
+                            foreach($clientes as $cli):?>
+                                <tr>
+                                    <td><?php echo $cli->getId(); ?></td>
+                                    <td><?php echo $cli->getNome(); ?></td>
+                                    <td><?php echo $cli instanceof PessoaFisica ? "<i class='glyphicon glyphicon-ok'></i>" : "<i class='glyphicon glyphicon-remove'></i>"; ?></td>
+                                    <td><?php for($i = 0; $i < $cli->getImportancia(); $i++) { echo '<i class="text-warning glyphicon glyphicon-star"></i>'; } ?></td>
+                                    <td><button onclick='' class='btn btn-primary'>Detalhes</button></td>
+                                </tr>
+                                <?php
+                            endforeach;
                             ?>
                         </table>
 
@@ -232,15 +183,24 @@ $clientes = [
                         <table class="table table-hover tabla-responsive">
                             <thead>
                             <tr>
-                                <td>ID <?php echo isset($ord) ? "<a href='/'><i class='glyphicon glyphicon-triangle-bottom'></i></a>" : "<i class='glyphicon glyphicon-triangle-bottom'></i>"; ?> </td>
+                                <td>ID <?php echo isset($ord) ? "<a href='/'><i class='glyphicon glyphicon-triangle-bottom'></i></a>" : "<a href='/?ord=desc'><i class='glyphicon glyphicon-triangle-top'></i></a>"; ?> </td>
                                 <td>Nome</td>
+                                <td>Pessoa Física</td>
+                                <td>Classificação</td>
                                 <td>Ação</td>
                             </tr>
                             </thead>
                             <?php
-                            foreach($clientes as $cli) {
-                                echo "<tr><td>{$cli->id}</td><td>{$cli->nome}</td><td><button onclick='Exibir({$cli->id})' class='btn btn-primary'>Detalhes</button></td>";
-                            }
+                            foreach($clientes as $cli):?>
+                                <tr>
+                                    <td><?php echo $cli->getId(); ?></td>
+                                    <td><?php echo $cli->getNome(); ?></td>
+                                    <td><?php echo $cli instanceof PessoaFisica ? "<i class='glyphicon glyphicon-ok'></i>" : "<i class='glyphicon glyphicon-remove'></i>"; ?></td>
+                                    <td><?php for($i = 0; $i < $cli->getImportancia(); $i++) { echo '<i class="text-warning glyphicon glyphicon-star"></i>'; } ?></td>
+                                    <td><button onclick='' class='btn btn-primary'>Detalhes</button></td>
+                                </tr>
+                                <?php
+                            endforeach;
                             ?>
                         </table>
 
