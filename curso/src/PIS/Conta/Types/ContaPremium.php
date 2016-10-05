@@ -5,7 +5,7 @@
  * Date: 04/10/2016
  * Time: 15:20
  */
-class ContaPremium extends Conta
+class ContaPremium extends ContaAbstract
 {
     public function __construct()
     {
@@ -14,9 +14,7 @@ class ContaPremium extends Conta
 
     protected function calculoDeposito($valor)
     {
-        $valorNormal = parent::calculoDeposito($valor);
-
-        return $valorNormal += 20;
+        return $valor += 20;
     }
 
 }

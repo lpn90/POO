@@ -4,8 +4,8 @@
  * Date: 28/09/2016
  * Time: 10:00
  */
-require_once __DIR__ . "/PessoaFisica.php";
-require_once __DIR__ . "/PessoaJuridica.php";
+require_once __DIR__ . "/Projeto/PessoaFisica.php";
+require_once __DIR__ . "/Projeto/PessoaJuridica.php";
 
 $cliente1 = new PessoaFisica(1,'Ana','Rua 1, 35', '(31) 9 8432-5893', 'Av. Paraguai, 12', rand(0,5),'11111111111');
 $cliente2 = new PessoaFisica(2,'Maria','Rua 1, 35', '(31) 9 8432-5893', null, rand(0,5),'22222222222');
@@ -121,7 +121,7 @@ $_SESSION['clientes'] = $clientes;
                                 <td><?php echo $cli->getNome(); ?></td>
                                 <td><?php echo $cli instanceof PessoaFisica ? "<i class='glyphicon glyphicon-ok'></i>" : "<i class='glyphicon glyphicon-remove'></i>"; ?></td>
                                 <td><?php for($i = 0; $i < $cli->getImportancia(); $i++) { echo '<i class="text-warning glyphicon glyphicon-star"></i>'; } ?></td>
-                                <td><a href='./exibeCliente.php/?id=<?php echo $cli->getId(); ?>' class='btn btn-primary'>Detalhes</a></td>
+                                <td><a href='Projeto/exibeCliente.php?id=<?php echo $cli->getId(); ?>' class='btn btn-primary'>Detalhes</a></td>
                             </tr>
                             <?php
                         endforeach;

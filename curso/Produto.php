@@ -27,10 +27,21 @@ class Produto
         $this->descricao = $descricao;
         $this->estoque = $estoque;
     }*/
+    public function iniciaProcesso()
+    {
+        echo "-----Iniciando Processo-----";
+    }
+
+    public function finalizaProcesso()
+    {
+        echo "-----Finalizando Processo-----";
+    }
 
     public function baixaEstoque()
     {
+        $this->iniciaProcesso();
         $this->estoque = $this->estoque - 1;
+        $this->finalizaProcesso();
     }
 
 }

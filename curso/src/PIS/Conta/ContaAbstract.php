@@ -2,26 +2,32 @@
 
 /**
  * User: Leonardo
- * Date: 29/09/2016
- * Time: 15:30
+ * Date: 05/10/2016
+ * Time: 11:48
  */
-class Conta
+abstract class ContaAbstract
 {
+    use ProcessoTrait;
+
     protected $saldo;
     
     public final function depositar($valor)
     {
+        $this->iniciaProcesso();
         $this->saldo += $this->calculoDeposito($valor);
+        $this->finalizaProcesso();
         return true;
     }
-    
+
     public function sacar($valor)
     {
+        $this->iniciaProcesso();
         if($this->saldo >= $valor){
             $this->saldo -= $valor;
+            $this->finalizaProcesso();
             return true;
         }
-        
+
         return false;
     }
 
@@ -32,10 +38,8 @@ class Conta
     {
         return $this->saldo;
     }
-
-    protected function calculoDeposito($valor)
-    {
-        return $valor += 10;
-    }
-
+    
+    
+    abstract protected function calculoDeposito($valor);
+    
 }
