@@ -2,22 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bdc15f05-8a68-4414-9924-06db4a92323d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/curso/src/PIS/Conta/Traits/ProcessoTrait.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/curso/src/PIS/Conta/Types/Conta.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autoload.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Projeto/Cliente.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Projeto/PessoaFisica.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Projeto/PessoaJuridica.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Projeto/contracts/EnderecoCobranca.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Projeto/contracts/Importancia.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Projeto/contracts/PF.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Projeto/contracts/PJ.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Projeto/exibeCliente.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/curso/banco/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/curso/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/curso/src/PIN/Conta/Types/ContaPremium.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/curso/src/PIN/Conta/Util/ProcessoTrait.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/interfaces/ComputadorDesktop.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/interfaces/ComputadorInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/interfaces/ComputadorNotebook.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/interfaces/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/index.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/curso/Produto.php" afterPath="$PROJECT_DIR$/curso/Produto.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cliente.php" afterPath="$PROJECT_DIR$/Projeto/Cliente.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PessoaFisica.php" afterPath="$PROJECT_DIR$/Projeto/PessoaFisica.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PessoaJuridica.php" afterPath="$PROJECT_DIR$/Projeto/PessoaJuridica.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/banco/Conta.php" afterPath="$PROJECT_DIR$/curso/src/PIS/Conta/ContaAbstract.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/banco/ContaPremium.php" afterPath="$PROJECT_DIR$/curso/src/PIS/Conta/Types/ContaPremium.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/banco/index.php" afterPath="$PROJECT_DIR$/curso/banco/index.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/contracts/EnderecoCobranca.php" afterPath="$PROJECT_DIR$/Projeto/contracts/EnderecoCobranca.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/contracts/Importancia.php" afterPath="$PROJECT_DIR$/Projeto/contracts/Importancia.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/contracts/PF.php" afterPath="$PROJECT_DIR$/Projeto/contracts/PF.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/contracts/PJ.php" afterPath="$PROJECT_DIR$/Projeto/contracts/PJ.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/exibeCliente.php" afterPath="$PROJECT_DIR$/Projeto/exibeCliente.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/curso/src/PIS/Conta/ContaAbstract.php" afterPath="$PROJECT_DIR$/curso/src/PIN/Conta/ContaAbstract.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/curso/src/PIS/Conta/Types/Conta.php" afterPath="$PROJECT_DIR$/curso/src/PIN/Conta/Types/ContaType.php" />
     </list>
     <ignored path="POO.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,12 +44,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-              <folding />
+            <state relative-caret-position="143">
+              <caret line="156" column="50" selection-start-line="156" selection-start-column="50" selection-end-line="156" selection-end-column="50" />
+              <folding>
+                <element signature="e#6#66#0#PHP" expanded="true" />
+                <element signature="e#332#387#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="exibeCliente.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/exibeCliente.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="54" column="15" selection-start-line="54" selection-start-column="15" selection-end-line="54" selection-end-column="15" />
+              <folding>
+                <element signature="e#133#188#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -65,14 +85,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index2.html" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/exemplo.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/js/bootstrap.min.js" />
-        <option value="$PROJECT_DIR$/curso/index.php" />
-        <option value="$PROJECT_DIR$/contracts/Importancia.php" />
-        <option value="$PROJECT_DIR$/contracts/EnderecoCobranca.php" />
         <option value="$PROJECT_DIR$/contracts/PJ.php" />
         <option value="$PROJECT_DIR$/contracts/PF.php" />
         <option value="$PROJECT_DIR$/Cliente.php" />
@@ -81,8 +93,6 @@
         <option value="$PROJECT_DIR$/pronto.html" />
         <option value="$PROJECT_DIR$/teste1.php" />
         <option value="$PROJECT_DIR$/teste.php" />
-        <option value="$PROJECT_DIR$/index2.php" />
-        <option value="$PROJECT_DIR$/exibeCliente.php" />
         <option value="$PROJECT_DIR$/banco/Conta.php" />
         <option value="$PROJECT_DIR$/banco/ContaPremium.php" />
         <option value="$PROJECT_DIR$/banco/index.php" />
@@ -92,7 +102,40 @@
         <option value="$PROJECT_DIR$/curso/banco/ContaAbstract.php" />
         <option value="$PROJECT_DIR$/Projeto/PessoaJuridica.php" />
         <option value="$PROJECT_DIR$/Projeto/index.php" />
+        <option value="$PROJECT_DIR$/curso/src/PIS/Conta/ContaAbstract.php" />
+        <option value="$PROJECT_DIR$/curso/src/PIN/Conta/Types/ContaPremium.php" />
+        <option value="$PROJECT_DIR$/curso/src/PIN/Conta/Util/ProcessoTrait.php" />
+        <option value="$PROJECT_DIR$/curso/src/PIN/Conta/ContaAbstract.php" />
+        <option value="$PROJECT_DIR$/curso/src/PIN/Conta/Types/Conta.php" />
+        <option value="$PROJECT_DIR$/curso/src/PIN/Conta/Types/ContaType.php" />
+        <option value="$PROJECT_DIR$/curso/src/PIN/Conta/Types/ContaPremiumType.php" />
+        <option value="$PROJECT_DIR$/curso/index.php" />
+        <option value="$PROJECT_DIR$/index2.php" />
+        <option value="$PROJECT_DIR$/src/PIN/Interfaces/PJ.php" />
+        <option value="$PROJECT_DIR$/src/PIN/Contracts/Interfaces/PJ.php" />
+        <option value="$PROJECT_DIR$/src/PIN/Contracts/Interfaces/PF.php" />
+        <option value="$PROJECT_DIR$/src/PIN/Contracts/Interfaces/Importancia.php" />
+        <option value="$PROJECT_DIR$/src/PIN/Contracts/EnderecoCobranca.php" />
+        <option value="$PROJECT_DIR$/src/PIN/Cliente/PessoaJuridica.php" />
+        <option value="$PROJECT_DIR$/src/PIN/Interfaces/ImportanciaInterface.php" />
+        <option value="$PROJECT_DIR$/src/PIN/Interfaces/EnderecoCobrancaInterface.php" />
+        <option value="$PROJECT_DIR$/src/PIN/Interfaces/PFInterface.php" />
+        <option value="$PROJECT_DIR$/src/PIN/Interfaces/PJInterface.php" />
+        <option value="$PROJECT_DIR$/src/PIN/Cliente/PessoaFisica.php" />
+        <option value="$PROJECT_DIR$/src/PIN/Cliente/Interfaces/EnderecoCobrancaInterface.php" />
+        <option value="$PROJECT_DIR$/src/PIN/Cliente/Interfaces/ImportanciaInterface.php" />
+        <option value="$PROJECT_DIR$/src/PIN/Cliente/Interfaces/PJInterface.php" />
+        <option value="$PROJECT_DIR$/src/PIN/Cliente/Interfaces/PFInterface.php" />
+        <option value="$PROJECT_DIR$/public/index.php" />
+        <option value="$PROJECT_DIR$/src/PIN/Cliente/AbstractCliente.php" />
+        <option value="$PROJECT_DIR$/src/PIN/Cliente/Cliente.php" />
+        <option value="$PROJECT_DIR$/src/PIN/Cliente/Types/PessoaFisicaType.php" />
+        <option value="$PROJECT_DIR$/src/PIN/Cliente/Types/PessoaJuridicaType.php" />
+        <option value="$PROJECT_DIR$/autoload.php" />
+        <option value="$PROJECT_DIR$/CadCliente.php" />
+        <option value="$PROJECT_DIR$/cadCliente.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/exibeCliente.php" />
       </list>
     </option>
   </component>
@@ -159,6 +202,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -177,10 +222,82 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="POO" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="POO" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PIN" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cliente" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="POO" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="POO" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PIN" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cliente" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Types" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="POO" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="POO" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PIN" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cliente" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Interfaces" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -192,10 +309,10 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="H:\html\POO" />
-      <recent name="H:\html\POO\Projeto" />
-      <recent name="H:\html\POO\curso" />
-      <recent name="H:\html\POO\src\PIS\Conta\Traits" />
-      <recent name="H:\html\POO\src\PIS" />
+      <recent name="H:\html\POO\public" />
+      <recent name="H:\html\POO\src\PIN\Cliente" />
+      <recent name="H:\html\POO\src\PIN\Cliente\Types" />
+      <recent name="H:\html\POO\src\PIN\Interfaces" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.pronto.html">
@@ -271,22 +388,32 @@
       <workItem from="1475547371940" duration="7992000" />
       <workItem from="1475593479859" duration="106000" />
       <workItem from="1475602869849" duration="2533000" />
-      <workItem from="1475675857186" duration="3678000" />
+      <workItem from="1475675857186" duration="10212000" />
+      <workItem from="1475862907234" duration="7215000" />
+      <workItem from="1475949035672" duration="2369000" />
     </task>
+    <task id="LOCAL-00001" summary="Oraganizando o Código">
+      <created>1475688509537</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1475688509537</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54044000" />
+    <option name="totallyTimeSpent" value="70162000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26435044" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2439577" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32905295" sideWeight="0.5030211" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.03210273" sideWeight="0.5060423" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32905295" sideWeight="0.49697885" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32744783" sideWeight="0.4939577" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -296,7 +423,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32744783" sideWeight="0.46978852" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993808" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -312,49 +439,83 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Oraganizando o Código" />
+    <option name="LAST_COMMIT_MESSAGE" value="Oraganizando o Código" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/curso/src/PIS/Conta/Types/Conta.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+          <folding>
+            <element signature="e#6#66#0#PHP" expanded="true" />
+            <element signature="e#332#387#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PIN/Cliente/Cliente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+          <folding>
+            <element signature="e#31#91#0#PHP" expanded="false" />
+            <element signature="e#227#280#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PIN/Cliente/Interfaces/PFInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PIN/Cliente/Interfaces/PJInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/curso/src/PIN/Conta/Types/ContaType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/curso/src/PIS/Conta/Types/ContaPremium.php">
+    <entry file="file://$PROJECT_DIR$/curso/src/PIN/Conta/Types/ContaPremiumType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/curso/banco/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PIN/curso/banco/index.php" />
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2074">
           <caret line="122" column="157" selection-start-line="122" selection-start-column="36" selection-end-line="122" selection-end-column="157" />
-          <folding />
+          <folding>
+            <element signature="e#6#66#0#PHP" expanded="true" />
+            <element signature="e#332#387#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/exibeCliente.php">
+    <entry file="file://$PROJECT_DIR$/exibeCliente.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#6#66#0#PHP" expanded="true" />
+            <element signature="e#133#188#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -363,16 +524,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2074">
           <caret line="122" column="157" selection-start-line="122" selection-start-column="36" selection-end-line="122" selection-end-column="157" />
-          <folding />
+          <folding>
+            <element signature="e#6#66#0#PHP" expanded="true" />
+            <element signature="e#332#387#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/exibeCliente.php">
+    <entry file="file://$PROJECT_DIR$/exibeCliente.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#6#66#0#PHP" expanded="true" />
+            <element signature="e#133#188#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -381,15 +545,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#6#66#0#PHP" expanded="true" />
+            <element signature="e#332#387#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Cliente.php">
+    <entry file="file://$PROJECT_DIR$/src/PIN/Cliente/Cliente.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1683">
           <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="21" />
-          <folding />
+          <folding>
+            <element signature="e#31#91#0#PHP" expanded="false" />
+            <element signature="e#227#280#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -397,15 +567,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#6#66#0#PHP" expanded="true" />
+            <element signature="e#332#387#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Cliente.php">
+    <entry file="file://$PROJECT_DIR$/src/PIN/Cliente/Cliente.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1683">
           <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="21" />
-          <folding />
+          <folding>
+            <element signature="e#31#91#0#PHP" expanded="false" />
+            <element signature="e#227#280#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -413,75 +589,75 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#6#66#0#PHP" expanded="true" />
+            <element signature="e#332#387#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index2.php" />
-    <entry file="file://$PROJECT_DIR$/Projeto/contracts/PF.php">
+    <entry file="file://$PROJECT_DIR$/src/PIN/Cliente/Interfaces/PFInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Cliente.php">
+    <entry file="file://$PROJECT_DIR$/src/PIN/Cliente/Cliente.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1972">
           <caret line="120" column="21" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
-          <folding />
+          <folding>
+            <element signature="e#31#91#0#PHP" expanded="false" />
+            <element signature="e#227#280#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/PessoaFisica.php">
+    <entry file="file://$PROJECT_DIR$/src/PIN/Cliente/Types/PessoaFisicaType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/PessoaJuridica.php">
+    <entry file="file://$PROJECT_DIR$/src/PIN/Cliente/Types/PessoaJuridicaType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/contracts/PJ.php">
+    <entry file="file://$PROJECT_DIR$/src/PIN/Cliente/Interfaces/PJInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="35" selection-start-line="9" selection-start-column="4" selection-end-line="10" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/contracts/EnderecoCobranca.php">
+    <entry file="file://$PROJECT_DIR$/src/PIN/Cliente/Interfaces/EnderecoCobrancaInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="57" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/contracts/Importancia.php">
+    <entry file="file://$PROJECT_DIR$/src/PIN/Cliente/Interfaces/ImportanciaInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="49" selection-start-line="9" selection-start-column="4" selection-end-line="10" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/curso/src/PIS/Conta/Types/Conta.php">
+    <entry file="file://$PROJECT_DIR$/curso/src/PIN/Conta/Types/ContaType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/curso/banco/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PIN/curso/banco/index.php" />
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/meta.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-196">
@@ -497,41 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/curso/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/contracts/Importancia.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="49" selection-start-line="9" selection-start-column="4" selection-end-line="10" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/contracts/EnderecoCobranca.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="57" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/contracts/PF.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/contracts/PJ.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="35" selection-start-line="9" selection-start-column="4" selection-end-line="10" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pronto.html" />
     <entry file="file://$PROJECT_DIR$/teste1.php" />
     <entry file="file://$PROJECT_DIR$/teste.php" />
@@ -543,93 +684,142 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/exibeCliente.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
-          <folding>
-            <element signature="e#6#66#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/curso/src/PIS/Conta/ContaAbstract.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/curso/Produto.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/curso/src/PIS/Conta/Types/Conta.php">
+    <entry file="file://$PROJECT_DIR$/src/PIN/curso/banco/index.php" />
+    <entry file="file://$PROJECT_DIR$/curso/src/PIN/Conta/ContaAbstract.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="51">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/curso/src/PIS/Conta/Traits/ProcessoTrait.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/curso/src/PIS/Conta/Types/ContaPremium.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/curso/banco/index.php">
+    <entry file="file://$PROJECT_DIR$/curso/src/PIN/Conta/Types/ContaType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-          <folding />
+          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/PessoaJuridica.php">
+    <entry file="file://$PROJECT_DIR$/curso/src/PIN/Conta/Types/ContaPremiumType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-          <folding />
+        <state relative-caret-position="204">
+          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/PessoaFisica.php">
+    <entry file="file://$PROJECT_DIR$/curso/src/PIN/Util/ProcessoTrait.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="28" column="26" selection-start-line="20" selection-start-column="20" selection-end-line="28" selection-end-column="26" />
-          <folding />
+        <state relative-caret-position="153">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Projeto/Cliente.php">
+    <entry file="file://$PROJECT_DIR$/src/PIN/Cliente/Interfaces/PFInterface.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="34">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PIN/Cliente/Interfaces/ImportanciaInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PIN/Cliente/Interfaces/PJInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PIN/Cliente/Interfaces/EnderecoCobrancaInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PIN/Cliente/Cliente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="16" column="62" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
+          <folding>
+            <element signature="e#31#91#0#PHP" expanded="false" />
+            <element signature="e#227#280#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PIN/Cliente/Types/PessoaJuridicaType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+          <folding>
+            <element signature="e#37#97#0#PHP" expanded="false" />
+            <element signature="e#99#138#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PIN/Cliente/Types/PessoaFisicaType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+          <folding>
+            <element signature="e#37#97#0#PHP" expanded="false" />
+            <element signature="e#99#123#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cadCliente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-          <folding />
+        <state relative-caret-position="143">
+          <caret line="156" column="50" selection-start-line="156" selection-start-column="50" selection-end-line="156" selection-end-column="50" />
+          <folding>
+            <element signature="e#6#66#0#PHP" expanded="true" />
+            <element signature="e#332#387#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exibeCliente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="54" column="15" selection-start-line="54" selection-start-column="15" selection-end-line="54" selection-end-column="15" />
+          <folding>
+            <element signature="e#133#188#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

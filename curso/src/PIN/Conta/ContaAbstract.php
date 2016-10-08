@@ -1,10 +1,15 @@
 <?php
 
+namespace PIN\Conta;
+
 /**
  * User: Leonardo
  * Date: 05/10/2016
  * Time: 11:48
  */
+
+use PIN\Conta\Util\ProcessoTrait;
+
 abstract class ContaAbstract
 {
     use ProcessoTrait;
