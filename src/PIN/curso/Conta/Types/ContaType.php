@@ -1,6 +1,6 @@
 <?php
 
-namespace PIN\Conta\Types;
+namespace PIN\Curso\Conta\Types;
 
 /**
  * User: Leonardo
@@ -8,7 +8,7 @@ namespace PIN\Conta\Types;
  * Time: 15:30
  */
 //Apelido para a Classe: use caminho as Apelido
-use PIN\Conta\ContaAbstract as ContaAbstrata;
+use PIN\Curso\Conta\ContaAbstract as ContaAbstrata;
 
 class ContaType extends ContaAbstrata
 {

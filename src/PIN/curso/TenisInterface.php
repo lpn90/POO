@@ -1,5 +1,7 @@
 <?php
 
+namespace PIN;
+
 /**
  * User: Leonardo
  * Date: 27/09/2016

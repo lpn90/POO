@@ -1,6 +1,7 @@
 <?php
 
-namespace PIN\Conta;
+namespace PIN\Curso\Conta;
+use PIN\Curso\Util\ProcessoTrait;
 
 /**
  * User: Leonardo
@@ -8,7 +9,6 @@ namespace PIN\Conta;
  * Time: 11:48
  */
 
-use PIN\Conta\Util\ProcessoTrait;
 
 abstract class ContaAbstract
 {

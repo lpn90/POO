@@ -4,9 +4,28 @@
  * Date: 28/09/2016
  * Time: 10:00
  */
-require_once __DIR__ . "/Projeto/PessoaFisica.php";
-require_once __DIR__ . "/Projeto/PessoaJuridica.php";
+/*
+define('CLASS_DIR', 'src/');
+set_include_path((get_include_path().PATH_SEPARATOR.CLASS_DIR));
+spl_autoload_register(function($class) {
+    require_once(str_replace('\\','/',$class .'.php'));
+});*/
 
+require_once ("autoload.php");
+require_once("cadCliente.php");
+
+use PIN\Cliente\Types\PessoaFisicaType as PessoaFisica;
+use PIN\Cliente\Types\PessoaJuridicaType as PessoaJuridica;
+
+$ord = $_REQUEST['ord'];
+
+if(isset($ord)) {
+    krsort($clientes);
+}
+
+//require_once __DIR__ . "/src/PIN/Cliente/PessoaFisicaType.php";
+//require_once __DIR__ . "/src/PIN/Cliente/PessoaJuridicaType.php";
+/*
 $cliente1 = new PessoaFisica(1,'Ana','Rua 1, 35', '(31) 9 8432-5893', 'Av. Paraguai, 12', rand(0,5),'11111111111');
 $cliente2 = new PessoaFisica(2,'Maria','Rua 1, 35', '(31) 9 8432-5893', null, rand(0,5),'22222222222');
 $cliente3 = new PessoaFisica(3,'Paula','Rua 1, 35', '(31) 9 8432-5893', 'Av. Paraguai, 12', rand(0,5),'33333333333');
@@ -27,7 +46,7 @@ session_start();
 
 $_SESSION['clientes'] = $clientes;
 
-
+*/
 ?>
 
 
@@ -59,6 +78,29 @@ $_SESSION['clientes'] = $clientes;
 
 </head>
 
+<!--MODAL-->
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+
+                <div>
+                    <h4 class="text-info"><i class="fa fa-pencil fa-3x"></i>Dados do Cliente</h4>
+                </div>
+                <!--PAINEL HEADER-->
+                <!-- <h4 class="modal-title" id="myModalLabel">modal titulo</h4>-->
+            </div>
+            <div id="conteudoModal" class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--FIM DO MODAL-->
+
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -83,12 +125,6 @@ $_SESSION['clientes'] = $clientes;
                     <li class="hidden">
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#ascendente">Ascendente</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#descendente">Descendente</a>
-                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -107,7 +143,7 @@ $_SESSION['clientes'] = $clientes;
                     <table class="table table-hover tabla-responsive">
                         <thead>
                         <tr>
-                            <td>ID <?php echo isset($ord) ? "<a href='/'><i class='glyphicon glyphicon-triangle-bottom'></i></a>" : "<a href='/?ord=desc'><i class='glyphicon glyphicon-triangle-top'></i></a>"; ?> </td>
+                            <td>ID <?php echo isset($ord) ? "<a href='/POO/'><i class='glyphicon glyphicon-triangle-bottom'></i></a>" : "<a href='?ord=cres'><i class='glyphicon glyphicon-triangle-top'></i></a>"; ?> </td>
                             <td>Nome</td>
                             <td>Pessoa Física</td>
                             <td>Classificação</td>
@@ -121,89 +157,12 @@ $_SESSION['clientes'] = $clientes;
                                 <td><?php echo $cli->getNome(); ?></td>
                                 <td><?php echo $cli instanceof PessoaFisica ? "<i class='glyphicon glyphicon-ok'></i>" : "<i class='glyphicon glyphicon-remove'></i>"; ?></td>
                                 <td><?php for($i = 0; $i < $cli->getImportancia(); $i++) { echo '<i class="text-warning glyphicon glyphicon-star"></i>'; } ?></td>
-                                <td><a href='Projeto/exibeCliente.php?id=<?php echo $cli->getId(); ?>' class='btn btn-primary'>Detalhes</a></td>
+                                <td><a id="btnVisualizar" href='<?php echo $cli->getId(); ?>' class='btn btn-primary' data-target="#modal" data-toggle="modal">Detalhes</a></td>
                             </tr>
                             <?php
                         endforeach;
                         ?>
                     </table>
-
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="ascendente" class="about-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Ascendente</h1>
-
-                        <table class="table table-hover tabla-responsive">
-                            <thead>
-                            <tr>
-                                <td>ID <?php echo isset($ord) ? "<a href='/'><i class='glyphicon glyphicon-triangle-bottom'></i></a>" : "<a href='/?ord=desc'><i class='glyphicon glyphicon-triangle-top'></i></a>"; ?> </td>
-                                <td>Nome</td>
-                                <td>Pessoa Física</td>
-                                <td>Classificação</td>
-                                <td>Ação</td>
-                            </tr>
-                            </thead>
-                            <?php
-                            foreach($clientes as $cli):?>
-                                <tr>
-                                    <td><?php echo $cli->getId(); ?></td>
-                                    <td><?php echo $cli->getNome(); ?></td>
-                                    <td><?php echo $cli instanceof PessoaFisica ? "<i class='glyphicon glyphicon-ok'></i>" : "<i class='glyphicon glyphicon-remove'></i>"; ?></td>
-                                    <td><?php for($i = 0; $i < $cli->getImportancia(); $i++) { echo '<i class="text-warning glyphicon glyphicon-star"></i>'; } ?></td>
-                                    <td><button onclick='' class='btn btn-primary'>Detalhes</button></td>
-                                </tr>
-                                <?php
-                            endforeach;
-                            ?>
-                        </table>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="descendente" class="services-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Descendente</h1>
-
-                    <?php
-                    krsort($clientes);
-                        ?>
-                        <table class="table table-hover tabla-responsive">
-                            <thead>
-                            <tr>
-                                <td>ID <?php echo isset($ord) ? "<a href='/'><i class='glyphicon glyphicon-triangle-bottom'></i></a>" : "<a href='/?ord=desc'><i class='glyphicon glyphicon-triangle-top'></i></a>"; ?> </td>
-                                <td>Nome</td>
-                                <td>Pessoa Física</td>
-                                <td>Classificação</td>
-                                <td>Ação</td>
-                            </tr>
-                            </thead>
-                            <?php
-                            foreach($clientes as $cli):?>
-                                <tr>
-                                    <td><?php echo $cli->getId(); ?></td>
-                                    <td><?php echo $cli->getNome(); ?></td>
-                                    <td><?php echo $cli instanceof PessoaFisica ? "<i class='glyphicon glyphicon-ok'></i>" : "<i class='glyphicon glyphicon-remove'></i>"; ?></td>
-                                    <td><?php for($i = 0; $i < $cli->getImportancia(); $i++) { echo '<i class="text-warning glyphicon glyphicon-star"></i>'; } ?></td>
-                                    <td><button onclick='' class='btn btn-primary'>Detalhes</button></td>
-                                </tr>
-                                <?php
-                            endforeach;
-                            ?>
-                        </table>
-
                 </div>
             </div>
         </div>
@@ -218,6 +177,17 @@ $_SESSION['clientes'] = $clientes;
     <!-- Scrolling Nav JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(" #btnVisualizar ").click(function() {
+                $(this).attr("href")
+                var cod=$(this).attr('href');
+                $('#conteudoModal').load('exibeCliente.php?cod='+ cod);
+            });
+        });
+    </script>
 
 </body>
 
