@@ -7,6 +7,7 @@
 
 namespace PIN\DB;
 use \PIN\Cliente\AbstractCliente;
+use PIN\Cliente\Interfaces\PFInterface;
 use \PIN\DB\Conexao;
 use \PIN\Cliente\Types\PessoaFisicaType;
 use \PIN\Cliente\Types\PessoaJuridicaType;
@@ -22,9 +23,9 @@ class Persistence
      * persistence constructor.
      * @param $conexao
      */
-    public function __construct(Conexao $conexao)
+    public function __construct(Conexao $conn)
     {
-        $this->conexao = $conexao;
+        $this->conexao = $conn->connect();
     }
     
     public function persist(AbstractCliente $cliente)
@@ -39,7 +40,7 @@ class Persistence
 
         try {
             $stmt = $this->conexao->prepare(
-                'INSERT INTO clintes (nome, endereco, telefone, enderecoCobranca, importancia, tipo, documento) 
+                'INSERT INTO clientes (nome, endereco, telefone, enderecoCobranca, importancia, tipo, documento) 
                   VALUES (:nome, :endereco, :telefone, :enderecoCobranca, :importancia, :tipo, :documento)'
             );
 
@@ -48,8 +49,8 @@ class Persistence
             $stmt->bindValue(':telefone', $this->cliente->getTelefone());
             $stmt->bindValue(':enderecoCobranca', $this->cliente->getEnderecoCobranca());
             $stmt->bindValue(':importancia', $this->cliente->getImportancia());
-            $stmt->bindValue(':tipo', $this->cliente instanceof PessoaFisica ? "PF" : "PJ");
-            $stmt->bindValue(':documento', $this->cliente instanceof PessoaFisica ? $this->cliente->getCpf() : $this->cliente->getCnpj());
+            $stmt->bindValue(':tipo', $this->cliente instanceof PFInterface ? "PF" : "PJ");
+            $stmt->bindValue(':documento', $this->cliente instanceof PFInterface ? $this->cliente->getCpf() : $this->cliente->getCnpj());
             $stmt->execute();
             $this->conexao->commit();
         }
@@ -59,10 +60,8 @@ class Persistence
     }
 
     public function getAll() {
-        $statement = $this->conexao->query(
-            'SELECT * FROM cliente'
-        );
-
+        $statement = $this->conexao->prepare("SELECT * FROM clientes");
+        $statement->execute();
         return $this->processResults($statement);
     }
 
@@ -70,7 +69,7 @@ class Persistence
         $results = array();
 
         if($statement) {
-            while($row = $statement->fetch(PDO::FETCH_OBJ)) {
+            while($row = $statement->fetch(\PDO::FETCH_OBJ)) {
                 if($row->tipo == "PF"){
                     $cliente = new PessoaFisicaType();
                     $cliente->setCpf($row->documento);
